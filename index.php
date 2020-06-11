@@ -8,7 +8,7 @@ $people = array(
  );
  ?>
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <title>Application Test - Dave Schwartz</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
