@@ -15,22 +15,26 @@ $people = array(
 </head>
 <body>
     <table>
-    <tr>
-        <th>Id</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Email</th>
-        <th>&nbsp;</th>
-    </tr>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>&nbsp;</th>
+            </tr>
+    </thead>
+    <tbody>
 <?php foreach($people as $person): ?>
-    <tr>
-        <td><?= $person['id']; ?></td>
-        <td><?php echo htmlentities($person['first_name']); ?></td>
-        <td><?php echo htmlentities($person['last_name']); ?></td>
-        <td><?php echo htmlentities($person['email']); ?></td>
-        <td><button class="table_button" data-name="<?php echo trim($person['first_name']) . " " . trim($person['last_name']); ?>" data-email="<?= $person['email']; ?>">Info</button></td>
-    </tr>
+            <tr>
+                <td><?= $person['id']; ?></td>
+                <td><?php echo htmlentities($person['first_name']); ?></td>
+                <td><?php echo htmlentities($person['last_name']); ?></td>
+                <td><?php echo htmlentities($person['email']); ?></td>
+                <td><button class="table_button" data-name="<?php echo trim($person['first_name']) . " " . trim($person['last_name']); ?>" data-email="<?= $person['email']; ?>">Info</button></td>
+            </tr>
 <?php endforeach; ?>
+        </tbody>
     </table>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>
